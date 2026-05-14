@@ -40,9 +40,8 @@ if __name__ == "__main__":
     m = get_model()
     
     while True:
-        url = input("\nImage url (or 'q' to quit): ").strip()
-        if url.lower() == 'q':
-            break
+        url = input("\nImage url: ").strip()
+
             
         res, acc = predict(url, m)
         print(f"Result: {res} ({acc:.2f}%)")
