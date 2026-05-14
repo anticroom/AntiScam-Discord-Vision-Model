@@ -3,7 +3,7 @@ import torch.nn as nn
 from torchvision import models, transforms
 
 dev = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-PATH = "model/Discord scam flagger V1.0.pth"
+PATH = "model/Discord AntiScam Vision.pth"
 LABELS = [ "✅ SAFE", "🚨 SCAM" ]
 def get_model():
     net = models.mobilenet_v3_small(weights=None)
