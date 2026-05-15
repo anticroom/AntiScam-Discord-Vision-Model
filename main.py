@@ -4,7 +4,7 @@ from torchvision import models, transforms
 
 dev = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 PATH = "model/Discord AntiScam Vision.pth"
-LABELS = [ "✅ SAFE", "🚨 SCAM" ]
+LABELS = [ "✅ SAFE!!!!", "🚨 SCAM!!!!" ]
 def get_model():
     net = models.mobilenet_v3_small(weights=None)
     in_f = net.classifier[ 3 ].in_features
@@ -36,7 +36,6 @@ def predict(url, net):
         return f"error: {e}", 0
 
 if __name__ == "__main__":
-    print(f"model loaded on {dev}")
     m = get_model()
     
     while True:
